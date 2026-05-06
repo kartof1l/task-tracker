@@ -22,14 +22,28 @@ type Usecase interface {
 	List(ctx context.Context) ([]taskdomain.Task, error)
 }
 
-type CreateInput struct {
-	Title       string
-	Description string
-	Status      taskdomain.Status
+type CreateInput struct {// добавление новых полей дял периодичных тасок
+	Title              string
+	Description        string
+	Status             taskdomain.Status
+	RecurrenceType     taskdomain.RecurrenceType
+	RecurrenceInterval *int
+	RecurrenceDays     []int
+	RecurrenceDates    []string
+	RecurrenceParity   *string
+	RecurrenceStart    *string
+	RecurrenceEnd      *string
 }
 
-type UpdateInput struct {
-	Title       string
-	Description string
-	Status      taskdomain.Status
+type UpdateInput struct {// такая же история
+	Title              string
+	Description        string
+	Status             taskdomain.Status
+	RecurrenceType     taskdomain.RecurrenceType
+	RecurrenceInterval *int
+	RecurrenceDays     []int
+	RecurrenceDates    []string
+	RecurrenceParity   *string
+	RecurrenceStart    *string
+	RecurrenceEnd      *string
 }

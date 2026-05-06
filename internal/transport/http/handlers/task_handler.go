@@ -31,6 +31,13 @@ func (h *TaskHandler) Create(w http.ResponseWriter, r *http.Request) {
 		Title:       req.Title,
 		Description: req.Description,
 		Status:      req.Status,
+		RecurrenceType:     req.RecurrenceType,
+		RecurrenceInterval: req.RecurrenceInterval,
+		RecurrenceDays:     req.RecurrenceDays,
+		RecurrenceDates:    req.RecurrenceDates,
+		RecurrenceParity:   req.RecurrenceParity,
+		RecurrenceStart:    req.RecurrenceStart,
+		RecurrenceEnd:      req.RecurrenceEnd,
 	})
 	if err != nil {
 		writeUsecaseError(w, err)
@@ -73,6 +80,13 @@ func (h *TaskHandler) Update(w http.ResponseWriter, r *http.Request) {
 		Title:       req.Title,
 		Description: req.Description,
 		Status:      req.Status,
+		RecurrenceType:     req.RecurrenceType,
+		RecurrenceInterval: req.RecurrenceInterval,
+		RecurrenceDays:     req.RecurrenceDays,
+		RecurrenceDates:    req.RecurrenceDates,
+		RecurrenceParity:   req.RecurrenceParity,
+		RecurrenceStart:    req.RecurrenceStart,
+		RecurrenceEnd:      req.RecurrenceEnd,
 	})
 	if err != nil {
 		writeUsecaseError(w, err)
